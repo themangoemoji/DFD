@@ -10,10 +10,6 @@
   margin-bottom: $base-line-height;
   cursor: pointer;
 
-  @include media($medium-screen) {
-    width: 40%;
-  }
-
   .hover-tile-container {
     height: $hover-tile-height;
     overflow: hidden;

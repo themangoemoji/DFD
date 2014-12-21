@@ -1,0 +1,9 @@
+.member {
+  @include span-columns(3);
+  margin-bottom: $gutter;
+}
+
+.member:nth-child(4n+4) {
+  margin-right: 0;
+}
+
