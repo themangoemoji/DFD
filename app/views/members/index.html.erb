@@ -1,5 +1,9 @@
+<h1>Members</h1>
+
+<div class="members">
 <% @members.each do |member| %>
   <div class="hover-tile-outer member">
+    <%=image_tag member.picture%>
     <div class="hover-tile-container">
       <div class="hover-tile hover-tile-visible">
       </div>
@@ -10,3 +14,4 @@
     </div>
   </div>
 <% end %>
+</div>

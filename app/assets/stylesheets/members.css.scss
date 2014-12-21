@@ -1,3 +1,9 @@
+h1 {
+  text-align: center;
+  margin-bottom: $gutter;
+  margin-top: $gutter;
+}
+
 .member {
   @include span-columns(3);
   margin-bottom: $gutter;
