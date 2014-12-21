@@ -1,35 +1,12 @@
-<h1>Listing members</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Picture</th>
-      <th>Major</th>
-      <th>Joined on</th>
-      <th>Position</th>
-      <th>Bio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><%= member.name %></td>
-        <td><%= member.picture %></td>
-        <td><%= member.major %></td>
-        <td><%= member.joined_on %></td>
-        <td><%= member.position %></td>
-        <td><%= member.bio %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Member', new_member_path %>
+<% @members.each do |member| %>
+  <div class="hover-tile-outer">
+    <div class="hover-tile-container">
+      <div class="hover-tile hover-tile-visible">
+      </div>
+      <div class="hover-tile hover-tile-hidden">
+        <h4> <%=member.name%> </h4>
+        <p> <%=member.position%> </p>
+      </div>
+    </div>
+  </div>
+<% end %>
