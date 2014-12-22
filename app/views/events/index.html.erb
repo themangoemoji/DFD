@@ -16,7 +16,19 @@
   <h1><%= @events.first.title %></h1>
   <p><%= @events.first.description %>
 </p>
+<div class="modal">
+  <label for="modal-1">
+    <div class="btn js-btn">Tickets</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1><em>"<%= @events.first.title %></em>" Tickets</h1>
+      <p class="intro">Thanks for you interest in our show. We never dissapoint. Ever.</p>
+      <p class="body">Tickets for the show can be found at <%= link_to "www.whartoncenter.com", "www.whartoncenter.com" %>, or you can buy them directly at the door. Thanks, and see you there!</p>
+    </div>
+  </div>
+</div>
+
 </article>
-
-
-<%= link_to 'New Event', new_event_path %>
