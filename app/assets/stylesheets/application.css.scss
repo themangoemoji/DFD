@@ -7,8 +7,10 @@
 @import 'base/base';
 @import 'hover_info';
 @import 'members';
+@import 'events';
 
 #container {
+  margin-top: 4 * $gutter;
   @include outer-container;
 }
 
