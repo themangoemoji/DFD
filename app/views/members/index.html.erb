@@ -1,17 +1,25 @@
-<h1>Members</h1>
+<div id="js-parallax-window" class="parallax-window">
+  <div class="parallax-static-content">
+    <h1><em>meet the guys</em></h1>
+  </div>
+  <div id="js-parallax-background" class="parallax-background"></div>
+</div>
+
 
 <div class="members">
-<% @members.each do |member| %>
-  <div class="hover-tile-outer member">
-    <%=image_tag member.picture%>
-    <div class="hover-tile-container">
-      <div class="hover-tile hover-tile-visible">
+  <% @members.each do |member| %>
+    <div class="hover-tile-outer member">
+      <div class="picture">
+        <%=image_tag member.picture%>
       </div>
-      <div class="hover-tile hover-tile-hidden">
-        <h4> <%=link_to member.name, member%> </h4>
-        <p> <%=member.position%> </p>
+      <div class="hover-tile-container">
+        <div class="hover-tile hover-tile-visible">
+        </div>
+        <div class="hover-tile hover-tile-hidden">
+          <h4> <%=link_to member.name, member%> </h4>
+          <p> <%=member.position%> </p>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>

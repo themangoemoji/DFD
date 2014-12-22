@@ -1,19 +1,5 @@
-.member {
-  @include span-columns(3);
-  margin-bottom: $gutter;
-}
-
-.member:nth-child(4n+4) {
-  margin-right: 0;
-}
-
-img {
-   filter: grayscale(1);
- }
-
 $parallax-window-height: 30em;
 $parallax-background-height: $parallax-window-height * 2;
-
 
 .parallax-window {
   max-height: $parallax-window-height;
@@ -21,14 +7,6 @@ $parallax-background-height: $parallax-window-height * 2;
   position: relative;
   text-align: center;
   width: 100%;
-  margin-top: $gutter;
-  margin-bottom: $gutter;
-  h1 {
-    font-size: 80px;
-    color: rgba(255, 255, 255, 0.9);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgba(10, 10, 10, 0.8);
-  }
 }
 
 .parallax-static-content {
@@ -39,8 +17,8 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-background {
-  background: url("paralax.jpg");
-  background-size: auto;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
+  background-size: cover;
   background-color: beige;
   background-position: top;
   height: $parallax-background-height;
@@ -51,4 +29,4 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 // Based on http://codepen.io/skeurentjes/
-
+//
