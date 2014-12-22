@@ -181,8 +181,9 @@ article.type-system-geometric {
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
-  $modal-image-height: 135px;
+  $modal-image-height: 175px;
   $modal-image-width: $modal-image-height;
+  $modal-image-height: 70px;
 
   label {
     cursor: pointer;
@@ -190,10 +191,11 @@ article.type-system-geometric {
   }
 
   label img {
-    $img-width: 300px;
+    $img-width: 500px;
     border-radius: $img-width/2;
     display: block;
-    max-width: $img-width;
+    max-width: 100 + $img-width;
+    width: 100 + $img-width;
   }
 
   input[type="checkbox"] {
@@ -201,7 +203,19 @@ article.type-system-geometric {
   }
 
   .btn {
+    width: $modal-image-width;
+    height: $modal-image-height;
     @extend button;
+
+    h1 {
+      font-size: 30px;
+      @include outer-container;
+      text-align: center;
+      padding-top: auto; 
+      padding-bottom: auto; 
+      margin: auto 0 auto 0;
+
+    }
   }
 
   .modal-open {

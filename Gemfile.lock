@@ -82,6 +82,7 @@ GEM
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
+    excon (0.42.1)
     execjs (2.2.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -93,6 +94,16 @@ GEM
       activesupport
       capybara
       i18n
+    heroku (3.21.1)
+      heroku-api (~> 0.3.19)
+      launchy (>= 0.3.2)
+      multi_json (~> 1.10.1)
+      netrc (>= 0.10.0)
+      rest-client (= 1.6.7)
+      rubyzip (= 0.9.9)
+    heroku-api (0.3.22)
+      excon (~> 0.38)
+      multi_json (~> 1.8)
     high_voltage (2.2.1)
     highline (1.6.21)
     hike (1.2.3)
@@ -123,6 +134,7 @@ GEM
     neat (1.5.1)
       bourbon (>= 3.1)
       sass (~> 3.2.19)
+    netrc (0.10.2)
     newrelic_rpm (3.9.8.273)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
@@ -162,6 +174,8 @@ GEM
     rake (10.4.2)
     recipient_interceptor (0.1.2)
       mail
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -178,6 +192,7 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
+    rubyzip (0.9.9)
     safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -248,6 +263,7 @@ DEPENDENCIES
   factory_girl_rails
   flutie
   formulaic
+  heroku
   high_voltage
   i18n-tasks
   jquery-rails

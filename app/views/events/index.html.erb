@@ -1,3 +1,4 @@
+<% content_for :hero do %>
 <div class="image-gradient-dynamic">
   <%= image_tag "top_photo.jpg" %>
   <div class="overlay"></div>
@@ -6,25 +7,29 @@
     <h1>Spartan Dischords</h1>
   </div>
 </div>
+<% end %>
 
 <head>
   <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 </head>
 
+
 <article class="type-system-geometric">
-  <h1><%= @events.first.title %></h1>
-  <p><%= @events.first.description %>
+  <h1><%= @next_event.title %></h1>
+  <p><%= @next_event.description %>
 </p>
 <div class="modal">
   <label for="modal-1">
-    <div class="btn js-btn">Tickets</div>
+    <div class="btn js-btn">
+      <h1>Tickets</h1>
+    </div>
   </label>
   <input class="modal-state" id="modal-1" type="checkbox" />
   <div class="modal-window">
     <div class="modal-inner">
       <label class="modal-close" for="modal-1"></label>
-      <h1><em>"<%= @events.first.title %></em>" Tickets</h1>
+      <h1><em>"<%= @next_event.title %></em>" Tickets</h1>
       <p class="body">Tickets for the show can be found at <%= link_to "www.whartoncenter.com", "www.whartoncenter.com" %>, or you can buy them directly at the door. Thanks, and see you there!</p>
     </div>
   </div>
