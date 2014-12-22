@@ -32,16 +32,15 @@ $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $dark-green: #206035;
 //$dark-green: #195C35;
-$off-white: #D6D6D6;
+$off-white: #FAFAFA;
 $dark-font: #141414;
-$off-black: #FAFAFA;
-$footer-background-color: #212121
+$off-black: #212121;
+$footer-background-color: #101010;
 // Background Color
-//$base-background-color: #D6D6D6;
-$base-background-color: #D6D6D6;
+$base-background-color: $off-black;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $off-white;
 $base-accent-color: $blue;
 
 // Link Colors
