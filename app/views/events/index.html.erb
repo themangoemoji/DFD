@@ -14,25 +14,15 @@
   <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 </head>
 
+<div class="event">
+  <%= image_tag "events/not_so_silent_night.jpg" %>
+  <div class="summary">
+    <article class="type-system-geometric">
+      <h1><%= @next_event.title %></h1>
+      <p><%= truncate(@next_event.description, length: 400, separator: ' ' )%></p>
+      <h2><%=  link_to "More Info >", event_path(@next_event)  %> </h2>
+    </article>
 
-<article class="type-system-geometric">
-  <h1><%= @next_event.title %></h1>
-  <p><%= @next_event.description %>
-</p>
-<div class="modal">
-  <label for="modal-1">
-    <div class="btn js-btn">
-      <h1>Tickets</h1>
-    </div>
-  </label>
-  <input class="modal-state" id="modal-1" type="checkbox" />
-  <div class="modal-window">
-    <div class="modal-inner">
-      <label class="modal-close" for="modal-1"></label>
-      <h1><em>"<%= @next_event.title %></em>" Tickets</h1>
-      <p class="body">Tickets for the show can be found at <%= link_to "www.whartoncenter.com", "www.whartoncenter.com" %>, or you can buy them directly at the door. Thanks, and see you there!</p>
-    </div>
   </div>
 </div>
 
-</article>

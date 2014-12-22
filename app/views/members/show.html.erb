@@ -1,35 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div class="member-info">
+<h1>
   <%= @member.name %>
-</p>
+</h1>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @member.picture %>
-</p>
+<%= image_tag @member.picture %>
 
-<p>
-  <strong>Major:</strong>
-  <%= @member.major %>
-</p>
+<p> - <%= @member.position %> - </p>
 
-<p>
-  <strong>Joined on:</strong>
-  <%= @member.joined_on %>
-</p>
+<h2>
+  <strong>Major: </strong><%= @member.major %>
+</h2>
 
-<p>
-  <strong>Position:</strong>
-  <%= @member.position %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @member.bio %>
-</p>
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %> |
-<td><%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>

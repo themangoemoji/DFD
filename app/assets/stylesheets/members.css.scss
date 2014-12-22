@@ -53,3 +53,25 @@ $parallax-background-height: $parallax-window-height;
 
 // Based on http://codepen.io/skeurentjes/
 
+.member-info {
+  img {
+
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  p {
+    font-size: 1em;
+    font-weight: 200;
+  }
+  @include outer-container;
+  text-align: center;
+}

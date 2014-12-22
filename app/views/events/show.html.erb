@@ -27,3 +27,19 @@
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+
+<div class="modal">
+  <label for="modal-1">
+    <div class="btn js-btn">
+      <h1>Tickets</h1>
+    </div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1><em>"<%= @event.title %></em>" Tickets</h1>
+      <p class="body">Tickets for the show can be found at <%= link_to "www.whartoncenter.com", "www.whartoncenter.com" %>, or you can buy them directly at the door. Thanks, and see you there!</p>
+    </div>
+  </div>
+</div>

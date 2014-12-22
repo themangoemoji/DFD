@@ -19,6 +19,7 @@
   img {
    width: 100%;
    height: auto;
+   max-height: 800px;
    position: relative;
    top: 0;
    left: 0; 
@@ -34,13 +35,13 @@
     @include transform(translate(-50%, -50%));
 
     h1 {
-      font-size: 100px;
+      font-size: 6em;
       font-weight: 800;
       color: rgba(255, 255, 255, 0.7)
     }
 
     h2 {
-      font-size: 50px;
+      font-size: 3em;
       font-weight: 800;
       color: rgba(255, 255, 255, 0.8)
     }
@@ -211,10 +212,8 @@ article.type-system-geometric {
       font-size: 30px;
       @include outer-container;
       text-align: center;
-      padding-top: auto; 
-      padding-bottom: auto; 
       margin: auto 0 auto 0;
-
+      vertical-align: middle;
     }
   }
 
@@ -334,6 +333,25 @@ article.type-system-geometric {
 
   .modal-state:checked + .modal-window .modal-inner {
     top: 0;
+  }
+}
+
+.event {
+  @include outer-container;
+  margin-bottom: 0;
+
+  img {
+    border-radius: 2%;
+    @include span-columns(4);
+  }
+  .summary {
+    @include span-columns(8);
+
+    article {
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
