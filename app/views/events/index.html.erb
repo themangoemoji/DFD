@@ -7,18 +7,16 @@
   </div>
 </div>
 
-<% @events.each do |event| %>
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-  </head>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+</head>
 
-  <article class="type-system-geometric">
-    <h1><%= event.title %></h1>
-    <p><%= event.description %>
-    </p>
-  </article>
+<article class="type-system-geometric">
+  <h1><%= @events.first.title %></h1>
+  <p><%= @events.first.description %>
+</p>
+</article>
 
-<% end %>
 
 <%= link_to 'New Event', new_event_path %>
