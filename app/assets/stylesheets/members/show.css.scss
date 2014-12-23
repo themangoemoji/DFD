@@ -65,10 +65,13 @@ $parallax-background-height: $parallax-window-height;
     border-radius: 50%;
     height: 300px;
     width: 300px;
+    margin-bottom: $gutter ;
   }
 
   h1 {
     font-size: 4em;
+    font-family: $serif-heading;
+    margin-bottom: $gutter / 3;
   }
 
   h2 {
@@ -87,3 +90,4 @@ $parallax-background-height: $parallax-window-height;
 .hover-tile-outer {
   border: 0;
 }
+
