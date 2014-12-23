@@ -19,7 +19,7 @@
   <div class="summary">
     <article class="type-system-geometric">
       <h1><%= @next_event.title %></h1>
-      <p><%= truncate(@next_event.description, length: 400, separator: ' ' )%></p>
+      <p><%= truncate(@next_event.description, length: 300, separator: ' ' )%></p>
       <h2><%=  link_to "More Info >", event_path(@next_event)  %> </h2>
     </article>
 

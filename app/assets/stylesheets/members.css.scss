@@ -60,9 +60,11 @@ $parallax-background-height: $parallax-window-height;
     height: 300px;
     width: 300px;
   }
+
   h1 {
     font-size: 4em;
   }
+
   h2 {
     font-size: 1.5em;
     font-weight: 400;
@@ -74,4 +76,8 @@ $parallax-background-height: $parallax-window-height;
   }
   @include outer-container;
   text-align: center;
+}
+
+.hover-tile-outer {
+  border: 0;
 }
