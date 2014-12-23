@@ -421,7 +421,7 @@ p {
 // }
 
 .footer-2 {
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-background: $dark-font;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
   $footer-disclaimer-color: transparentize($footer-color, .6);
@@ -429,7 +429,6 @@ p {
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
-  vertical-align: middle;
   overflow: hidden;
 
   .footer-logo {
