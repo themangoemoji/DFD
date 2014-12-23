@@ -1,26 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<%= image_tag @event.image %>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+<div class="intro-text">
+<h3><%= @event.category %></h3>
+<h2><%= @event.title %></h2>
+<h4> <%= @event.starts_at%></h4>
+<p><%= @event.description %></p>
+</div>
 
 <div class="modal">
   <label for="modal-1">
@@ -32,8 +15,10 @@
   <div class="modal-window">
     <div class="modal-inner">
       <label class="modal-close" for="modal-1"></label>
-      <h1><em>"<%= @event.title %></em>" Tickets</h1>
-      <p class="body">Tickets for the show can be found at <%= link_to "www.whartoncenter.com", "www.whartoncenter.com" %>, or you can buy them directly at the door. Thanks, and see you there!</p>
+      <h1><em><%= @event.title %></em> Tickets</h1>
+      <p class="body">Tickets for the show can be found at: <%= link_to @event.link, @event.link %> Thanks, and see you there!</p>
+
     </div>
   </div>
 </div>
+

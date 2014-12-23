@@ -9,12 +9,13 @@
 @import 'members';
 @import 'events';
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Roboto:500,900italic,900,400italic,700italic,300,700,500italic,300italic,400|Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Sanchez:400italic,400);
 
 #container {
   margin-top: 4 * $gutter;
   @include outer-container;
   margin-bottom: 3 * $gutter;
-  font-family: 'Arvo';
+  font-family: 'Sanchez';
 }
 
 header.navigation {
@@ -35,6 +36,7 @@ header.navigation {
 
   background-color: $dark-green;
   border-bottom: 1px solid darken($navigation-background, 10);
+  font-family: $sans-serif-heading;
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
