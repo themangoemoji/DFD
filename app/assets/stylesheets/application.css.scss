@@ -8,11 +8,13 @@
 @import 'hover_info';
 @import 'members';
 @import 'events';
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Roboto:500,900italic,900,400italic,700italic,300,700,500italic,300italic,400|Roboto+Condensed:300italic,400italic,700italic,400,300,700);
 
 #container {
   margin-top: 4 * $gutter;
   @include outer-container;
   margin-bottom: 3 * $gutter;
+  font-family: 'Arvo';
 }
 
 header.navigation {
@@ -64,7 +66,6 @@ header.navigation {
     color: $navigation-color;
     display: block;
     float: right;
-    font-family: $sans-serif;
     font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
@@ -92,11 +93,11 @@ header.navigation {
     }
   }
 
-h1 {
-  text-align: center;
-  margin-bottom: $gutter;
-  margin-top: 2 * $gutter;
-}
+  h1 {
+    text-align: center;
+    margin-bottom: $gutter;
+    margin-top: 2 * $gutter;
+  }
 
   ul.navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
@@ -142,7 +143,9 @@ h1 {
     a {
       color: $navigation-color;
       display: inline-block;
+      font-family: $sans-serif-heading;
       font-weight: 400;
+      font-size: 1.2em;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
@@ -437,3 +440,8 @@ h1 {
     text-align: center;
   }
 }
+
+p {
+  font-family: $sans-serif;
+}
+

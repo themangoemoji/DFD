@@ -25,7 +25,10 @@ $parallax-background-height: $parallax-window-height;
   margin-top: $gutter;
   margin-bottom: $gutter;
   h1 {
-    font-size: 80px;
+    font-size: 7em;
+    font-family: $sans-serif-heading;
+    font-weight: 900;
+    font-style: italic;
     color: rgba(255, 255, 255, 0.9);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgba(10, 10, 10, 0.8);

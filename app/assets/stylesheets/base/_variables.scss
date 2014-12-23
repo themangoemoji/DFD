@@ -1,6 +1,7 @@
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
+$sans-serif: 'Roboto Condensed';
+$serif: 'Arvo';
+$sans-serif-heading: 'Roboto';
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
@@ -31,6 +32,7 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $dark-green: #206035;
+$light-green: #2CA95E;
 //$dark-green: #195C35;
 $off-white: #DADADA;
 $dark-font: #141414;
@@ -41,7 +43,7 @@ $base-background-color: $off-black;
 
 // Font Colors
 $base-font-color: $off-white;
-$base-accent-color: $blue;
+$base-accent-color: $light-green;
 
 // Link Colors
 $base-link-color: $base-accent-color;
