@@ -338,6 +338,8 @@ article.type-system-geometric {
 
 .event {
   @include outer-container;
+  padding: 30px 30px 30px 30px;
+  border: 2px white;
   margin-bottom: 0;
 
   img {
