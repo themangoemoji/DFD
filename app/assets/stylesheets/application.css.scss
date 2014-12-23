@@ -429,6 +429,7 @@ p {
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
+  vertical-align: middle;
   overflow: hidden;
 
   .footer-logo {
@@ -492,7 +493,7 @@ p {
 
       li {
         float: left;
-        font-size: 1em;
+        font-size: 1.5em;
         padding-right: .7em;
 
         &:last-child {
