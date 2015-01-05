@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.Jcrop
 //= require_tree .
 
 $(document).ready(function() {
@@ -26,6 +27,7 @@ $(document).ready(function() {
     });
   });
 });
+
 
 $(document).ready(function() {
   if ($("#js-parallax-window").length) {

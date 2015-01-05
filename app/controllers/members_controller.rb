@@ -24,7 +24,11 @@ class MembersController < ApplicationController
     @member = Member.new(member_params)
 
     if @member.save
-      redirect_to @member, notice: 'Member was successfully created.'
+      if params[:member][:picture].present?
+        render :crop
+      else
+        redirect_to @member, notice: 'Member was successfully created.'
+      end
     else
       render :new
     end
@@ -33,7 +37,11 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   def update
     if @member.update(member_params)
-      redirect_to @member, notice: 'Member was successfully updated.'
+      if params[:member][:picture].present?
+        render :crop
+      else
+        redirect_to @member, notice: 'Member was successfully updated.'
+      end
     else
       render :edit
     end
@@ -46,13 +54,13 @@ class MembersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_member
-      @member = Member.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_member
+    @member = Member.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def member_params
-      params.require(:member).permit(:name, :picture, :major, :joined_on, :position, :bio)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def member_params
+    params.require(:member).permit(:name, :picture, :major, :joined_on, :position, :bio)
+  end
 end

@@ -8,6 +8,7 @@
 @import 'hover_info';
 @import 'members';
 @import 'events';
+@import "jquery.Jcrop";
 @import url(//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Roboto:500,900italic,900,400italic,700italic,300,700,500italic,300italic,400|Roboto+Condensed:300italic,400italic,700italic,400,300,700);
 @import url(//fonts.googleapis.com/css?family=Sanchez:400italic,400);
 
@@ -58,7 +59,7 @@ header.navigation {
 
     img {
       max-height: $navigation-height;
-      padding: .8em 0;
+      padding: .3em 0;
     }
   }
 
@@ -370,58 +371,6 @@ p {
   font-family: $sans-serif;
 }
 
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
-
-// html, body {
-//  height: 100%;
-// }
-
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
-
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
-
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
-
-// html, body {
-//  height: 100%;
-// }
-
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
-
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
-
 .footer-2 {
   $footer-background: $dark-font;
   $footer-color: white;
@@ -432,6 +381,8 @@ p {
   padding: $base-spacing;
   width: 100%;
   overflow: hidden;
+  height: 4em;
+  vertical-align: middle;
 
   .footer-logo {
     margin-right: 1em;
@@ -444,7 +395,7 @@ p {
   }
 
   .footer-logo img {
-    height: 1.6em;
+    height: 2.6em;
   } 
 
   ul {
@@ -514,4 +465,3 @@ p {
     }
   }
 }
-

@@ -8,10 +8,12 @@ gem "coffee-rails"
 gem "delayed_job_active_record"
 gem "email_validator"
 gem "flutie"
+gem 'high_voltage'
 gem "heroku"
 gem "high_voltage"
 gem "i18n-tasks"
 gem "jquery-rails"
+gem 'jcrop-rails-v2'
 gem "neat", "~> 1.5.1"
 gem "newrelic_rpm"
 gem "normalize-rails", "~> 3.0.0"
@@ -24,6 +26,8 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
+gem "carrierwave"
+gem "rmagick"
 
 group :development do
   gem "bundler-audit"

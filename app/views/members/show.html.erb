@@ -3,7 +3,7 @@
   <%= @member.name %>
 </h1>
 
-<%= image_tag @member.picture %>
+<%= image_tag @member.picture_url(:full).to_s %>
 
 <p> - <%= @member.position %> - </p>
 

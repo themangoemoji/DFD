@@ -1,0 +1,10 @@
+<h1>Crop Picture</h1>
+
+<%= image_tag @member.picture_url(:large), id: "cropbox" %>
+
+<%= form_for @member do |f| %>
+  <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
+    <%= f.text_field attribute, :id => attribute %>
+  <% end %>
+  <p><%= f.submit "Crop" %></p>
+<% end %>
