@@ -35,15 +35,20 @@
     @include transform(translate(-50%, -50%));
 
     h1 {
-      font-size: 6em;
+      font-size: 12em;
       font-weight: 800;
-      color: rgba(255, 255, 255, 0.7)
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $serif-heading;
+      font-family: 'Monoton', cursive;
+      line-height: 0.9em;
     }
 
     h2 {
-      font-size: 3em;
+      font-size: 4em;
       font-weight: 800;
-      color: rgba(255, 255, 255, 0.8)
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $serif-heading;
+      font-family: 'Monoton', cursive;
     }
 
     p {
@@ -57,14 +62,14 @@
 
   .overlay {
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    transparentize($image-gradient-color-bottom, $transparency-bottom));
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
 
     &:after {
       content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-        transparentize($image-gradient-color-right, $transparency-right));
+      transparentize($image-gradient-color-right, $transparency-right));
       display: block;
       @include position(absolute, 0px 0px 0px 0px);
     }
@@ -168,7 +173,7 @@ article.type-system-geometric {
       right: -12px;
     }
   }
-  
+
   hr {
     width: 3em;
   }

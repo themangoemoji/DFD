@@ -10,7 +10,6 @@ gem "email_validator"
 gem "flutie"
 gem 'high_voltage'
 gem "heroku"
-gem "high_voltage"
 gem "i18n-tasks"
 gem "jquery-rails"
 gem 'jcrop-rails-v2'

@@ -3,7 +3,9 @@
   <%= @member.name %>
 </h1>
 
-<%= image_tag @member.picture_url(:full).to_s %>
+<div class="portait">
+<%= image_tag @member.picture_url(:large).to_s %>
+</div>
 
 <p> - <%= @member.position %> - </p>
 
