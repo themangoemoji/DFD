@@ -27,6 +27,8 @@ gem "uglifier"
 gem "unicorn"
 gem "carrierwave"
 gem "rmagick"
+gem "bcrypt", :require => "bcrypt"
+gem "better_errors"
 
 group :development do
   gem "bundler-audit"
