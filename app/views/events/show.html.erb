@@ -21,3 +21,11 @@
     </div>
   </div>
 </div>
+
+<% if current_user %>
+  <ul>
+  <li class="event-link"> <%= link_to "New Event", new_event_path %> </li>
+  <li class="event-link"> <%= link_to "Edit Event", edit_event_path %> </li>
+  <li class="event-link"> <%= link_to "Delete Event", @event.destroy %> </li>
+  </ul>
+<% end %>

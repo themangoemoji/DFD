@@ -39,7 +39,7 @@
       font-weight: 800;
       color: rgba(255, 255, 255, 0.8);
       font-family: $serif-heading;
-      font-family: 'Monoton', cursive;
+      font-family: $title, cursive;
       line-height: 0.9em;
     }
 
@@ -48,7 +48,7 @@
       font-weight: 800;
       color: rgba(255, 255, 255, 0.8);
       font-family: $serif-heading;
-      font-family: 'Monoton', cursive;
+      font-family: $title, cursive;
     }
 
     p {
