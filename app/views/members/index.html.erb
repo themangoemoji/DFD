@@ -29,6 +29,11 @@
         </div>
         <div class="hover-tile hover-tile-hidden">
           <h4> <%=link_to member.name, member%> </h4>
+          <% if current_user %>
+            <ul>
+              <li class="member-link"> <%= link_to "Delete member", member.destroy %> </li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>

@@ -22,6 +22,10 @@
   font-family: 'Sanchez';
 }
 
+html, body {
+  margin: 0px;
+}
+
 header.navigation {
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;

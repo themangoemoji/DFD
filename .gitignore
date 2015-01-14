@@ -11,3 +11,5 @@
 /public/system
 /tags
 /tmp/*
+/public/uploads
+/public/assets

@@ -14,6 +14,7 @@
   <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 </head>
 
+<% if @next_event %>
 <div class="event">
   <%= image_tag "events/not_so_silent_night.jpg" %>
   <div class="summary">
@@ -25,4 +26,4 @@
 
   </div>
 </div>
-
+<% end %>
