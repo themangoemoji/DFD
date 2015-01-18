@@ -26,6 +26,6 @@
   <ul>
   <li class="event-link"> <%= link_to "New Event", new_event_path %> </li>
   <li class="event-link"> <%= link_to "Edit Event", edit_event_path %> </li>
-  <li class="event-link"> <%= link_to "Delete Event", @event.destroy %> </li>
+  <li class="event-link"> <%= link_to "Delete Event", event_path(@event), :method => :delete %> </li>
   </ul>
 <% end %>

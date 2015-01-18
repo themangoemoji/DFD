@@ -23,7 +23,7 @@
 <% if current_user %>
   <ul>
   <li class="member-link"> <%= link_to "Edit member", edit_member_path %> </li>
-  <li class="member-link"> <%= link_to "Delete member", @member.destroy %> </li>
+  <li class="member-link"> <%= link_to "Delete member", member_path(@member), :method => :delete %> </li>
   </ul>
 <% end %>
 </div>
