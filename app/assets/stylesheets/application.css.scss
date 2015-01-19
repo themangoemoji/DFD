@@ -403,7 +403,11 @@ p {
   }
 
   .footer-logo img {
-    height: 2.6em;
+    max-height: 3em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
   } 
 
   ul {
