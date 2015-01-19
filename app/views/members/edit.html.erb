@@ -5,4 +5,4 @@
 <%= link_to 'Show', @member %> |
 <%= link_to 'Back', members_path %>  
 <br>
-<%= link_to 'Destroy (and shed single tear)', @member.destroy %>
+<%= link_to "Delete member (and shed single tear)", member_path(@member), :method => :delete %> 

@@ -1,3 +1,41 @@
+
 .hipster-bar {
-  display: inline;
+  display: block;
+  @include outer-container;
+  img {
+  }
+
+  #left-bar, #moustache, #right-bar {
+    @include span-columns(4);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+h1,h5 {
+  text-align: center;
+}
+
+h1 {
+  font-family: $serif-heading;
+  font-size: 4em;
+}
+
+article {
+  .break {
+    @include outer-container;
+    margin: $gutter;
+  }
+
+  p {
+    background: $off-white;
+    font-family: 'Sanchez';
+    color: $dark-font;
+    padding: $gutter;
+    margin: $gutter;
+    width: 685px;
+    margin: 0 auto;
+  }
 }
