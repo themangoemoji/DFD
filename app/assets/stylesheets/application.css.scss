@@ -384,12 +384,14 @@ p {
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
   $footer-disclaimer-color: transparentize($footer-color, .6);
+  $footer-height: 4rem;
 
   background: $footer-background;
-  padding: $base-spacing;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+  height: $footer-height;
   width: 100%;
   overflow: hidden;
-  height: 4em;
   vertical-align: middle;
 
   .footer-logo {
@@ -402,31 +404,12 @@ p {
     }
   }
 
-  .footer-logo img {
-    max-height: 3em;
+  img, span {
+    display: inline-block;
+    max-height: $footer-height/2;
     position: relative;
-    top: 50%;
+    top: $footer-height/2;
     transform: translateY(-50%);
-
-  } 
-
-  ul {
-    margin-bottom: 1em;
-    @include media($large-screen) {
-      float: left;
-      margin-left: 1em;
-      margin-bottom: 0;
-    }
-  }
-
-  ul li {
-    padding-right: 1em;
-    font-weight: 800;
-
-    @include media($large-screen) {
-      display: inline;
-      text-align: left;
-    }
   }
 
   ul li a {
@@ -467,8 +450,6 @@ p {
 
       img {
         opacity: .7;
-        height: 1.6em;
-        padding: 1px;
 
         &:hover {
           opacity: 1;
