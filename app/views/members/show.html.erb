@@ -4,15 +4,21 @@
 </h1>
 
 <div class="portait">
-<%= image_tag @member.picture_url(:large).to_s %>
+  <%= image_tag @member.picture_url(:large).to_s %>
 </div>
 
-<p> - <%= @member.position %> - </p>
+<% if (@member.position.length != 0) %>
+  <p> - <%= @member.position %> - </p>
+<% else %>
+  <br/>
+<% end %>
 
 <h2>
   <strong>Major: </strong><%= @member.major %>
 </h2>
 
+<br />
+<p> <%= @member.bio %> </p>
 </div>
 
 <br />
@@ -20,10 +26,10 @@
 <br />
 <br />
 <div class="admin-link">
-<% if current_user %>
-  <ul>
-  <li class="member-link"> <%= link_to "Edit member", edit_member_path %> </li>
-  <li class="member-link"> <%= link_to "Delete member", member_path(@member), :method => :delete %> </li>
-  </ul>
-<% end %>
+  <% if current_user %>
+    <ul>
+      <li class="member-link"> <%= link_to "Edit member", edit_member_path %> </li>
+      <li class="member-link"> <%= link_to "Delete member", member_path(@member), :method => :delete %> </li>
+    </ul>
+  <% end %>
 </div>

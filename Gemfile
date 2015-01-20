@@ -29,6 +29,7 @@ gem "carrierwave"
 gem "rmagick"
 gem "bcrypt", :require => "bcrypt"
 gem "better_errors"
+gem "binding_of_caller"
 
 group :development do
   gem "bundler-audit"
