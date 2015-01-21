@@ -4,7 +4,7 @@
 <div class="admin-link">
   <% if current_user %>
     <div class="flash-success">
-      <span>Add <%= link_to 'New Song', new_song_path %> </span>
+      <span>Add <u><%= link_to 'New Song', new_song_path %> </u></span>
     </div>
   <% end %>
 </div>
@@ -18,13 +18,21 @@
   <% @songs.each do |song| %>
     <tr>
       <div class="video">
-        <td><%= song.title %></td>
+        <h2><%= song.title %></h2>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/D7mK5bFPS-E?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+          <iframe src="<%= song.url %>" frameborder="0" allowfullscreen></iframe>
         </div>
+        <% if (song.soloists.length != 0) %>
+        <div class="soloists">
+          <div class="tooltip-item">
+            Soloists
+            <div class="tooltip">
+              <p><%= song.soloists %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
       </div>
-      <td><%= song.url %></td>
-      <td><%= song.soloists %></td>
       <% if current_user %>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
