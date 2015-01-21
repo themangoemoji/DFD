@@ -29,13 +29,11 @@
         </div>
         <div class="hover-tile hover-tile-hidden">
           <h4> <%=link_to member.name, member%> </h4>
-          <div class="admin-link">
-            <% if current_user %>
-              <ul>
-                <li class="member-link"> <%= link_to "Delete member", member_path(@members.find(member.id)), :method => :delete %> </li>
-              </ul>
-            <% end %>
-          </div>
+          <% if current_user %>
+            <ul>
+              <li class="member-link"> <%= link_to "Delete member", member_path(@member), :method => :delete %> </li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>

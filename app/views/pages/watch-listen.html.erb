@@ -1,0 +1,44 @@
+<div class="watch-listen">
+<h1>Watch & Listen</h1>
+
+<br/>
+
+<hr>
+
+<div class="video">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/D7mK5bFPS-E?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="video">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/D7mK5bFPS-E?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="video">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/D7mK5bFPS-E?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="admin-link">
+<% if current_user %>
+  <ul>
+    <li class="song-link"> <%= link_to "New Song", new_song_path %> </li>
+  </ul>
+<% end %>
+</div>
+
+
+<div class="song">
+  <% @songs.each do |song| %>
+    <% if current_user %>
+      <ul>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
+
+</div>
