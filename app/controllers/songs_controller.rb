@@ -24,7 +24,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
 
     if @song.save
-      redirect_to @song, notice: 'Song was successfully created.'
+      redirect_to @song, notice: "Song was successfully created."
     else
       render :new
     end
@@ -33,7 +33,7 @@ class SongsController < ApplicationController
   # PATCH/PUT /songs/1
   def update
     if @song.update(song_params)
-      redirect_to @song, notice: 'Song was successfully updated.'
+      redirect_to @song, notice: "Song was successfully updated."
     else
       render :edit
     end
@@ -42,17 +42,17 @@ class SongsController < ApplicationController
   # DELETE /songs/1
   def destroy
     @song.destroy
-    redirect_to songs_url, notice: 'Song was successfully destroyed.'
+    redirect_to songs_url, notice: "Song was successfully destroyed."
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_song
-      @song = Song.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_song
+    @song = Song.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def song_params
-      params.require(:song).permit(:title, :url, :soloists)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def song_params
+    params.require(:song).permit(:title, :url, :soloists)
+  end
 end
