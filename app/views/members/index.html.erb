@@ -11,7 +11,9 @@
 <div class="admin-link">
 <% if current_user %>
   <ul>
-  <li class="member-link"> <%= link_to "New Member", new_member_path %> </li>
+  <div class="flash-success">
+    <span>Add a <u><%= link_to "New Member", new_member_path %> </u></span>
+  </div>
   </ul>
 <% end %>
 </div>

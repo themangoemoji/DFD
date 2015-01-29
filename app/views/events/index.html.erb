@@ -14,6 +14,16 @@
   <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 </head>
 
+<div class="admin-link">
+<% if current_user %>
+  <ul>
+  <div class="flash-success">
+    <span>Add a <u><%= link_to "New Event", new_event_path %> </u></span>
+  </div>
+  </ul>
+<% end %>
+</div>
+
 <% if @next_event %>
 <div class="event">
   <%= image_tag "events/not_so_silent_night.jpg" %>

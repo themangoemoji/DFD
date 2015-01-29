@@ -1,3 +1,16 @@
+<div class="admin-link">
+  <% if current_user %>
+    <ul>
+      <div class="flash-alert">
+        <span><u><%= link_to "Edit Member", edit_member_path %> </u></span>
+      </div>
+      <div class="flash-error">
+        <span><u><%= link_to "Delete Member", member_path(@member), :method => :delete %> </u></span>
+      </div>
+    </ul>
+  <% end %>
+</div>
+
 <div class="member-info">
 <h1>
   <%= @member.name %>
@@ -25,11 +38,4 @@
 <br />
 <br />
 <br />
-<div class="admin-link">
-  <% if current_user %>
-    <ul>
-      <li class="member-link"> <%= link_to "Edit member", edit_member_path %> </li>
-      <li class="member-link"> <%= link_to "Delete member", member_path(@member), :method => :delete %> </li>
-    </ul>
-  <% end %>
-</div>
+

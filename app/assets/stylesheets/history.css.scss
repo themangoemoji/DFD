@@ -22,11 +22,17 @@ h1 {
 }
 
 .history {
-  .hideme
+  .hideme, 
   {
     @include outer-container;
     margin: $gutter;
     opacity:0.3;
+  }
+
+  .monster, 
+  {
+    @include outer-container;
+    margin: $gutter;
   }
 
   p {

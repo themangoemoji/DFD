@@ -1,3 +1,19 @@
+<div class="admin-link">
+  <% if current_user %>
+    <ul>
+      <div class="flash-success">
+        <span>Add a <u><%= link_to "New Event", new_event_path %> </u></span>
+      </div>
+      <div class="flash-alert">
+        <span><u><%= link_to "Edit Event", edit_event_path %> </u></span>
+      </div>
+      <div class="flash-error">
+        <span><u><%= link_to "Delete Event", event_path(@event), :method => :delete %> </u></span>
+      </div>
+    </ul>
+  <% end %>
+</div>
+
 <div class="intro-text">
 <h3><%= @event.category %></h3>
 <h2><%= @event.title %></h2>
@@ -22,10 +38,6 @@
   </div>
 </div>
 
-<% if current_user %>
-  <ul>
-  <li class="event-link"> <%= link_to "New Event", new_event_path %> </li>
-  <li class="event-link"> <%= link_to "Edit Event", edit_event_path %> </li>
-  <li class="event-link"> <%= link_to "Delete Event", event_path(@event), :method => :delete %> </li>
-  </ul>
-<% end %>
+<br/>
+<br/>
+
