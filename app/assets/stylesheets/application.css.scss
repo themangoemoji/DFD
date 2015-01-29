@@ -409,6 +409,8 @@ html, body {
 
 
 .footer-2 {
+  position:fixed;
+  bottom: 0px;
   $footer-background: $dark-font;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
