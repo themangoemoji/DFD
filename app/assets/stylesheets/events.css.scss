@@ -16,6 +16,7 @@
   width: 100%;
   margin-bottom: $base-line-height;  
 
+
   img {
 
     width: 100%;
@@ -90,8 +91,8 @@
     display: inline;
     @include span-columns(12);
     h1 {
-    text-align: left;
-  }
+      text-align: left;
+    }
   }
 
   #show-title {
@@ -209,6 +210,13 @@ article.type-system-geometric {
 
   p.author {
     font-family: $sans-serif;
+  }
+}
+#upcoming-event-header {
+  @include span-columns(4);
+  display: block;
+  h3 {
+    text-align: left;
   }
 }
 
