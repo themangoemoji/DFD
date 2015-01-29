@@ -28,6 +28,7 @@
   .btn {
     width: $modal-image-width;
     height: $modal-image-height;
+    margin-top: $gutter;
     @extend button;
 
     h1 {
@@ -188,9 +189,13 @@
 .intro-text {
   $intro-text-width: 60%;
 
-  margin-bottom: 5em;
+  margin-bottom: $gutter;
   margin-top: 4em;
   text-align: center;
+  
+  p {
+    font-size: 1.2em;
+  }
 
   h2 {
     font-family: $serif;

@@ -17,12 +17,13 @@
   margin-bottom: $base-line-height;  
 
   img {
-   width: 100%;
-   height: auto;
-   max-height: 800px;
-   position: relative;
-   top: 0;
-   left: 0; 
+
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    position: relative;
+    top: 0;
+    left: 0; 
   }
 
   .copy {
@@ -74,6 +75,36 @@
       @include position(absolute, 0px 0px 0px 0px);
     }
   }
+}
+
+.event {
+  img {
+    @include span-columns(3);
+  }
+}
+
+.description {
+  display: inline;
+
+  #show-name, #show-date {
+    display: inline;
+    @include span-columns(12);
+    h1 {
+    text-align: left;
+  }
+  }
+
+  #show-title {
+    display: inline;
+    @include span-columns(6);
+  }
+
+  #show-date {
+    display: inline;
+    @include span-columns(12);
+    font-size: 1.1em;
+  }
+
 }
 
 
@@ -147,8 +178,8 @@ article.type-system-geometric {
   }
 
   p {
-    font-family: "Roboto Condensed";
-    line-height: 1.5em;
+    font-family: $serif;
+    line-height: 1.4em;
     font-size: 1.05em;
     margin-bottom: 1.5em;
   }

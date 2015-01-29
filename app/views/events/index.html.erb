@@ -29,8 +29,15 @@
   <%= image_tag "events/letsduet.jpg" %>
   <div class="summary">
     <article class="type-system-geometric">
-      <h1><%= @next_event.title %></h1>
-      <p><%= truncate(@next_event.description, length: 300, separator: ' ' )%></p>
+      <div class="description">
+        <div id="show-name">
+          <h1><%= @next_event.title %></h1>
+        </div>
+        <div id="show-date">
+          <h5> <%= @next_event.starts_at.strftime("%B %d @ %l:%M %P")%></h5>
+        </div>
+      </div>
+      <p><%= truncate(@next_event.description, length: 200, separator: ' ' )%></p>
       <h2><%=  link_to "More Info >", event_path(@next_event)  %> </h2>
     </article>
 

@@ -12,13 +12,15 @@
   }
 }
 
-h1,h5 {
-  text-align: center;
-}
+.history-header {
+  h1, h5 {
+    text-align: center;
+  }
 
-h1 {
-  font-family: $serif-heading;
-  font-size: 4em;
+  h1 {
+    font-family: $serif-heading;
+    font-size: 4em;
+  }
 }
 
 .history {
