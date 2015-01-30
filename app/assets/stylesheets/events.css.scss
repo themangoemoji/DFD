@@ -212,11 +212,14 @@ article.type-system-geometric {
     font-family: $sans-serif;
   }
 }
+
 #upcoming-event-header {
   @include span-columns(4);
   display: block;
+
   h3 {
     text-align: left;
+    font-family: $sans-serif-heading;
   }
 }
 
