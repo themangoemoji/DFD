@@ -9,7 +9,7 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raoulpop.files.wordpress.com/2009/03/shure-x2u-with-microphone1.jpg';
+  $hero-image: 'http://www.spartandischords.com/wp-content/uploads/2008/08/Dischords.jpg';
 
   margin-top: $gutter * 2;
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
@@ -38,6 +38,7 @@
 
     .hero-copy {
       text-align: center;
+      background-color: rgba(5,4,2,0.8);
 
       h1 {
         font-size: 1.6em;
