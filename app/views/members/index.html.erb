@@ -34,6 +34,7 @@
           <div class="admin-link">
             <% if current_user %>
               <ul>
+                <li class="member-link"> <%= link_to "Edit member", edit_member_path(@members.find(member.id)) %> </li>
                 <li class="member-link"> <%= link_to "Delete member", member_path(@members.find(member.id)), :method => :delete %> </li>
               </ul>
             <% end %>

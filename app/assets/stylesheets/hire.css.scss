@@ -9,15 +9,16 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raoulpop.files.wordpress.com/2009/03/shure-x2u-with-microphone1.jpg';
+  $hero-image: 'http://www.spartandischords.com/wp-content/uploads/2008/08/Dischords.jpg';
 
-  margin-top: (2 * $gutter);
+  margin-top: $gutter * 2;
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3em;
+  @include position(absolute, 0px 0px 0px 0px);
 
   .hero-logo img {
     height: 6em;
@@ -29,14 +30,22 @@
     @include clearfix;
     color: $hero-color;
     margin: auto;
-    padding: 3.5em;
+    margin-top: ($gutter);
+    padding: 1.5em;
     text-align: center;
+    a {
+      color: $off-white;
+    }
 
     .hero-copy {
       text-align: center;
-      
+      background-color: rgba(5,4,2,0.8);
+      max-width: 700px;
+      margin: 0 auto;
+      padding: $gutter;
       h1 {
         font-size: 1.6em;
+        font-family: $serif-heading;
         margin-bottom: 0.5em;
 
         @include media($large-screen) {
@@ -47,17 +56,18 @@
       p {
         font-weight: 200;
         line-height: 1.4em;
-        margin: 0 auto 3em auto; 
+        padding: 0 1em 0 1em;
 
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 40%;
+          max-width: 100%;
         }
       }
     }
 
     button {
       @include button(flat, $base-accent-color);
+      margin-top: $gutter;
       padding: 0.7em 1em;
     }
   }

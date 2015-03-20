@@ -409,7 +409,9 @@ html, body {
 
 
 .footer-2 {
-  $footer-background: $dark-font;
+  position:fixed;
+  bottom: 0px;
+  $footer-background: $footer-color;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
   $footer-disclaimer-color: transparentize($footer-color, .6);

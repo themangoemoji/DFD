@@ -1,12 +1,12 @@
 <% content_for :hero do %>
-<div class="image-gradient-dynamic">
-  <%= image_tag "top_photo.jpg" %>
-  <div class="overlay"></div>
-  <div class="copy">
-    <h2>The</h2>
-    <h1>Spartan Dischords</h1>
+  <div class="image-gradient-dynamic">
+    <%= image_tag "top_photo.jpg" %>
+    <div class="overlay"></div>
+    <div class="copy">
+      <h2>The</h2>
+      <h1>Spartan Dischords</h1>
+    </div>
   </div>
-</div>
 <% end %>
 
 <head>
@@ -15,25 +15,39 @@
 </head>
 
 <div class="admin-link">
-<% if current_user %>
-  <ul>
-  <div class="flash-success">
-    <span>Add a <u><%= link_to "New Event", new_event_path %> </u></span>
-  </div>
-  </ul>
-<% end %>
+  <% if current_user %>
+    <ul>
+      <div class="flash-success">
+        <span>Add a <u><%= link_to "New Event", new_event_path %> </u></span>
+      </div>
+    </ul>
+  <% end %>
 </div>
+
+<div id="upcoming-event-header">
+  <h3>Upcoming Event:</h3>
+</div>
+<br/>
+<hr>
+<br/>
 
 <% if @next_event %>
-<div class="event">
-  <%= image_tag "events/letsduet.jpg" %>
-  <div class="summary">
-    <article class="type-system-geometric">
-      <h1><%= @next_event.title %></h1>
-      <p><%= truncate(@next_event.description, length: 300, separator: ' ' )%></p>
-      <h2><%=  link_to "More Info >", event_path(@next_event)  %> </h2>
-    </article>
+  <div class="event">
+    <%= image_tag "events/letsduet.jpg" %>
+    <div class="summary">
+      <article class="type-system-geometric">
+        <div class="description">
+          <div id="show-name">
+            <h1><%= @next_event.title %></h1>
+          </div>
+          <div id="show-date">
+            <h5> <%= @next_event.starts_at.strftime("%B %d @ %l:%M %P")%></h5>
+          </div>
+        </div>
+        <p><%= truncate(@next_event.description, length: 200, separator: ' ' )%></p>
+        <h2><%=  link_to "More Info >", event_path(@next_event)  %> </h2>
+      </article>
 
+    </div>
   </div>
-</div>
 <% end %>
