@@ -1,6 +1,8 @@
 Dischords
 =========
 
+[![Join the chat at https://gitter.im/wrightmhw/DFD](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wrightmhw/DFD?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Getting Started
 ---------------
 
