@@ -33,7 +33,7 @@
 
 <% if @next_event %>
   <div class="event">
-    <%= image_tag "events/sports.jpg" %>
+    <%= image_tag @next_event.image_url(:thumb) if @next_event.image? %>
     <div class="summary">
       <article class="type-system-geometric">
         <div class="description">

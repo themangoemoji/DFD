@@ -8,10 +8,18 @@
       <%= f.input :starts_at %>
     </div>
     <%= f.input :description %>
-    <%= f.input :image %>
     <%= f.input :category %>
     <%= f.input :link %>
     <%= f.input :ticket_description %>
+    </br>
+    <p>
+    <%= f.label "Upload Event Image" %>
+    <%= f.file_field :image %>
+    or choose image URL
+    <%= f.text_field :remote_image_url %>
+    </p>
+    </br>
+
   </div>
 
   <div class="form-actions">
