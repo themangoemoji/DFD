@@ -213,6 +213,17 @@ article.type-system-geometric {
   }
 }
 
+#thankYous {
+  #thankYou {
+    text-align: center;
+    font-size: 6.5em;
+  }
+  #thankYouAccry {
+    text-align: center;
+  }
+
+}
+
 #upcoming-event-header {
   @include span-columns(4);
   display: block;
