@@ -21,6 +21,7 @@
 <p><%= @event.description %></p>
 </div>
 
+      <% if @event.category != "Auditions" %>
 <div class="modal">
   <label for="modal-1">
     <div class="btn js-btn">
@@ -33,6 +34,15 @@
       <label class="modal-close" for="modal-1"></label>
       <h1><em><%= @event.title %></em> Tickets</h1>
       <p class="body"><%=@event.ticket_description%><br/><br/>Go get your tickets <b><%=link_to "here", @event.link, :target => '_blank'%></b>.</p>
+    </div>
+  </div>
+<% else %>
+  <div id="FacebookEventButton">
+    <h3>
+      <%=link_to "Check out the Facebook event", @event.link, :target => '_blank'%>
+</h3>
+  </div>
+<% end %>
     </div>
   </div>
 </div>

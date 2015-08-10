@@ -1,259 +1,269 @@
-.modal {
-  $modal-padding: 3em;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
-  $modal-image-height: 175px;
-  $modal-image-width: $modal-image-height;
-  $modal-image-height: 70px;
-
-  label {
-    cursor: pointer;
-    margin-bottom: 0;
-    @include outer-container;
-    text-align: center;
+  #FacebookEventButton {
+     background-color: $facebook-color;
+     margin-left: 8 * $gutter;
+     margin-right: 8 * $gutter;
+     padding: 20px;
+     a {
+       color: $off-white;
+     }
   }
 
-  label img {
-    $img-width: 500px;
-    border-radius: $img-width/2;
-    display: block;
-    max-width: 100 + $img-width;
-    width: 100 + $img-width;
-  }
+  .modal {
+    $modal-padding: 3em;
+    $modal-background: $base-background-color;
+    $modal-close-color: $light-gray;
+    $modal-image-height: 175px;
+    $modal-image-width: $modal-image-height;
+    $modal-image-height: 70px;
 
-  input[type="checkbox"] {
-    display: none;
-  }
-
-  .btn {
-    width: $modal-image-width;
-    height: $modal-image-height;
-    margin-top: $gutter;
-    @extend button;
-
-    h1 {
-      font-size: 30px;
+    label {
+      cursor: pointer;
+      margin-bottom: 0;
       @include outer-container;
       text-align: center;
-      margin: auto 0 auto 0;
-      vertical-align: middle;
     }
-  }
 
-  .modal-open {
-    overflow: hidden;
-  }
-
-  .modal-window { // overlay
-    @include transition(opacity .25s ease);
-    @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, .85);
-    opacity: 0;
-    text-align: left;
-    visibility: hidden;
-    z-index: 99999999999;
-
-    .modal-bg {
-      @include position(absolute, 0px 0px 0px 0px);
-      cursor: pointer;
-    }
-  }
-
-  .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
-    @include size(1.5em);
-    cursor: pointer;
-    background: $modal-background;
-
-    &:after,
-    &:before {
-      @include position(absolute, 3px 3px 0 50%);
-      @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
-      background: $modal-close-color;
-      content: '';
+    label img {
+      $img-width: 500px;
+      border-radius: $img-width/2;
       display: block;
-      margin: -3px 0 0 -1px;
+      max-width: 100 + $img-width;
+      width: 100 + $img-width;
     }
 
-    &:hover:after,
-    &:hover:before {
-      background: darken($modal-close-color, 10);
+    input[type="checkbox"] {
+      display: none;
     }
 
-    &:before {
-      @include transform(rotate(-45deg));
-    }
-  }
+    .btn {
+      width: $modal-image-width;
+      height: $modal-image-height;
+      margin-top: $gutter;
+      @extend button;
 
-  .modal-inner {
-    @include transition(opacity .25s ease);
-    border-radius: $base-border-radius;
-    background: $modal-background;
-    margin: auto;
-    max-height: 95%;
-    position: relative;
-    overflow: auto;
-    width: 95%;
-    padding: $modal-padding /2;
-    margin-top: .6em;
-
-    @include media($medium-screen) {
-      padding: $modal-padding;
-      width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
+      h1 {
+        font-size: 30px;
+        @include outer-container;
+        text-align: center;
+        margin: auto 0 auto 0;
+        vertical-align: middle;
+      }
     }
 
-    @include media($large-screen) {
-      width: 50%;
-      margin-top: 10em;
+    .modal-open {
+      overflow: hidden;
     }
 
-    h1 {
-      color: $base-font-color;
-      margin-bottom: .6em;
+    .modal-window { // overlay
+      @include transition(opacity .25s ease);
+      @include position(fixed, 0px 0px 0px 0px);
+      background: rgba(0,0,0, .85);
+      opacity: 0;
       text-align: left;
-      text-transform: capitalize;
-      font-size: 3rem;
-      font-family: $sans-serif-heading;
+      visibility: hidden;
+      z-index: 99999999999;
+
+      .modal-bg {
+        @include position(absolute, 0px 0px 0px 0px);
+        cursor: pointer;
+      }
     }
 
-    p.body, p.intro {
-      font-size: $base-font-size;
-      max-width: 100% !important;
-      text-align: left;
+    .modal-close {
+      @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
+      @include size(1.5em);
+      cursor: pointer;
+      background: $modal-background;
 
-      &.intro {
-        color: $blue;
-        line-height: 1.6em;
+      &:after,
+      &:before {
+        @include position(absolute, 3px 3px 0 50%);
+        @include transform(rotate(45deg));
+        @include size(.15em 1.5em);
+        background: $modal-close-color;
+        content: '';
+        display: block;
+        margin: -3px 0 0 -1px;
       }
 
-      &.body { 
-        color: $base-font-color;
-        line-height: 1.45em;
+      &:hover:after,
+      &:hover:before {
+        background: darken($modal-close-color, 10);
+      }
 
-        @include media($medium-screen) {
-          @include columns(1 8em);
+      &:before {
+        @include transform(rotate(-45deg));
+      }
+    }
+
+    .modal-inner {
+      @include transition(opacity .25s ease);
+      border-radius: $base-border-radius;
+      background: $modal-background;
+      margin: auto;
+      max-height: 95%;
+      position: relative;
+      overflow: auto;
+      width: 95%;
+      padding: $modal-padding /2;
+      margin-top: .6em;
+
+      @include media($medium-screen) {
+        padding: $modal-padding;
+        width: 60%;
+        max-height: 60%;
+        margin-top: 10em;
+      }
+
+      @include media($large-screen) {
+        width: 50%;
+        margin-top: 10em;
+      }
+
+      h1 {
+        color: $base-font-color;
+        margin-bottom: .6em;
+        text-align: left;
+        text-transform: capitalize;
+        font-size: 3rem;
+        font-family: $sans-serif-heading;
+      }
+
+      p.body, p.intro {
+        font-size: $base-font-size;
+        max-width: 100% !important;
+        text-align: left;
+
+        &.intro {
+          color: $blue;
+          line-height: 1.6em;
+        }
+
+        &.body { 
+          color: $base-font-color;
+          line-height: 1.45em;
+
+          @include media($medium-screen) {
+            @include columns(1 8em);
+          }
+        }
+      }
+
+      a.cta {
+        color: white;
+        display: inline-block;
+        margin-right: .5em;
+        margin-top: 1em;
+
+        &:last-child {
+          padding: 0 2em;
         }
       }
     }
 
-    a.cta {
+    .modal-state:checked + .modal-window {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-state:checked + .modal-window .modal-inner {
+      top: 0;
+    }
+  }
+
+  .event {
+    @include outer-container;
+    padding: 30px 30px 30px 30px;
+    border: 2px white;
+    margin-bottom: 0;
+
+    img {
+      border-radius: 2%;
+      @include span-columns(4);
+    }
+    .summary {
+      @include span-columns(8);
+
+      article {
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Based on code by Kasper Mikiewicz
+
+
+  // bourbon refils intro text
+  .intro-text {
+    $intro-text-width: 60%;
+
+    margin-bottom: $gutter;
+    margin-top: 4em;
+    text-align: center;
+
+    p {
+      font-size: 1.2em;
+    }
+
+    h2 {
+      font-family: $serif;
+      font-weight: 800;
+      margin-bottom: .3em;
+
+      @include media($large-screen) {
+        font-size: 3em;
+        margin-bottom: .4em;
+      }
+    }
+
+    h3 {
+      background: $base-accent-color;
       color: white;
       display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em;
-
-      &:last-child {
-        padding: 0 2em;
-      }
-    }
-  }
-
-  .modal-state:checked + .modal-window {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .modal-state:checked + .modal-window .modal-inner {
-    top: 0;
-  }
-}
-
-.event {
-  @include outer-container;
-  padding: 30px 30px 30px 30px;
-  border: 2px white;
-  margin-bottom: 0;
-
-  img {
-    border-radius: 2%;
-    @include span-columns(4);
-  }
-  .summary {
-    @include span-columns(8);
-
-    article {
-      padding-top: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Based on code by Kasper Mikiewicz
-
-
-// bourbon refils intro text
-.intro-text {
-  $intro-text-width: 60%;
-
-  margin-bottom: $gutter;
-  margin-top: 4em;
-  text-align: center;
-  
-  p {
-    font-size: 1.2em;
-  }
-
-  h2 {
-    font-family: $serif;
-    font-weight: 800;
-    margin-bottom: .3em;
-
-    @include media($large-screen) {
-      font-size: 3em;
-      margin-bottom: .4em;
-    }
-  }
-
-  h3 {
-    background: $base-accent-color;
-    color: white;
-    display: inline-block;
-    font-size: .7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: 3px 8px;
-    text-transform: uppercase;
-
-    @include media($large-screen) {
-      margin-bottom: 3.3em;
-    }
-  }
-
-  h4 {
-    color: lighten($base-font-color, 20);
-    font-size: 1.3em;
-    font-weight: 300;
-    line-height: 1.4em;
-    margin: 0 auto 1em;
-
-    @include media($large-screen) {
-      font-size: 1.7em;
-      line-height: 1.35em;
-      margin: 0 auto 1em;
-      width: $intro-text-width;
-    }    
-  }
-
-  p {
-    margin: auto;
-
-    @include media($large-screen) {
-      width: $intro-text-width;
-    }
-
-    a {
-      font-size: .8em;
-      font-weight: 400;
+      font-size: .7em;
+      font-weight: 800;
+      margin-bottom: 2em;
+      padding: 3px 8px;
       text-transform: uppercase;
 
-      span {
-        font-size: 1.3em;
-        line-height: 0;
+      @include media($large-screen) {
+        margin-bottom: 3.3em;
+      }
+    }
+
+    h4 {
+      color: lighten($base-font-color, 20);
+      font-size: 1.3em;
+      font-weight: 300;
+      line-height: 1.4em;
+      margin: 0 auto 1em;
+
+      @include media($large-screen) {
+        font-size: 1.7em;
+        line-height: 1.35em;
+        margin: 0 auto 1em;
+        width: $intro-text-width;
+      }    
+    }
+
+    p {
+      margin: auto;
+
+      @include media($large-screen) {
+        width: $intro-text-width;
+      }
+
+      a {
+        font-size: .8em;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        span {
+          font-size: 1.3em;
+          line-height: 0;
+        }
       }
     }
   }
-}
