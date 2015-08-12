@@ -11,6 +11,11 @@ textarea {
 
 .datetime {
   display: inline;
+
+}
+
+label {
+  padding-right: $gutter;
 }
 
 .expander {  
@@ -63,3 +68,13 @@ textarea {
   }
 }
 
+
+#notes {
+  ul {
+    list-style-type: circle;
+    padding-left: $gutter;
+  }
+  padding: $gutter;
+  background: $off-white;
+  color: $off-black;
+}
