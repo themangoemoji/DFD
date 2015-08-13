@@ -243,9 +243,15 @@
       @include media($large-screen) {
         font-size: 1.7em;
         line-height: 1.35em;
-        margin: 0 auto 1em;
+        margin: 0 auto 0em;
         width: $intro-text-width;
       }    
+    }
+
+    h5 {
+      margin-bottom: $gutter;
+      font-weight: 10px;
+      font-size: 1em;
     }
 
     p {
